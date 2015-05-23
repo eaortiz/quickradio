@@ -9,6 +9,7 @@ def hello_world():
 	the Shakira song. </a>"
 
 if __name__ == '__main__':
-	app.run()
+	port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
 	url_for('static', filename='04NoCreo.m4a')
 
